@@ -1,0 +1,30 @@
+﻿@model SchoolProject_1_w2022.Models.Teacher
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit Teacher</h2>
+
+<div id="containershow">
+    <nav>
+        <a class="navlink" href="/Teacher/List">Back to Teachers</a>
+    </nav>
+
+    <form method="POST" action="/Teacher/Update/@Model.TeacherId">
+         <div class="inputrow">
+              <lable for="TeacherFName">First Name:</lable>
+              <input type="text" id="TeacherFName" value="@Model.TeacherFName" name="TeacherFName" />
+         </div>
+         <div class="inputrow">
+              <lable for="TeacherLName">Last Name:</lable>
+              <input type="text" id="TeacherFName" value="@Model.TeacherLName" name="TeacherLName" />
+         </div>
+         <div class="inputrow">
+              <lable for="EmployeeNumber">Employee Number:</lable>
+              <input type="text" id="EmployeeNumber:" value="@Model.EmployeeNumber" name="EmployeeNumber" />
+         </div>
+         <div class="inputrow">
+               <input type="submit" value="Update Teacher" />
+         </div>
+    </form>
+</div>
